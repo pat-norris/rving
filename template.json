@@ -1,0 +1,220 @@
+{
+"Actor": {
+	"types": ["PC", "Foe", "Horde"],
+	"templates": {
+		"background": {
+			"biography": "",
+			"hairColor": ""
+		},
+		"stats": {
+			"stamina": {
+				"value": 0,
+				"min": 0,
+				"max": 0
+			},
+			"defense": {
+				"value": 0
+			},
+			"soak": {
+				"value": 0
+			},
+			"encumbrance": {
+				"value": 0
+			}
+		},
+		"attributes": {
+			"attributes": {
+				"Strength": {
+					"value": 0,
+					"label": "Strength",
+					"abrev": "ST"
+				},
+				"Perception": {
+					"value": 0,
+					"label": "Perception",
+					"abrev": "PE"
+				},
+				"Endurance": {
+					"value": 0,
+					"label": "Endurance",
+					"abrev": "EN"
+				},
+				"Charisma": {
+					"value": 0,
+					"label": "Charisma",
+					"abrev": "CH"
+				},
+				"Intelligence": {
+					"value": 0,
+					"label": "Intelligence",
+					"abrev": "IN"
+				},
+				"Agility": {
+					"value": 0,
+					"label": "Agility",
+					"abrev": "AG"
+				},
+				"Luck": {
+					"value": 0,
+					"label": "Luck",
+					"abrev": "LU"
+				},
+			}
+		}
+		"skills": {
+			"skills": {
+				"Big Guns": {
+					"value": 0,
+					"type": "Combat"
+				},
+				"Bows": {
+					"value": 0,
+					"type": "Combat"
+				},
+				"Melee": {
+					"value": 0,
+					"type": "Combat"
+				},
+				"Small Guns": {
+					"value": 0,
+					"type": "Combat"
+				},
+				"Throwing": {
+					"value": 0,
+					"type": "Combat"
+				},
+				"Unarmed": {
+					"value": 0,
+					"type": "Combat"
+				},
+				"Computers": {
+					"value": 0,
+					"type": "Education"
+				},
+				"Engineering": {
+					"value": 0,
+					"type": "Education"
+				},
+				"Rocket Science": {
+					"value": 0,
+					"type": "Education"
+				},
+				"Substances": {
+					"value": 0,
+					"type": "Education"
+				},
+				"Surgery": {
+					"value": 0,
+					"type": "Education"
+				},
+				"Charm": {
+					"value": 0,
+					"type": "Social"
+				},
+				"Coercion": {
+					"value": 0,
+					"type": "Social"
+				},
+				"Deception": {
+					"value": 0,
+					"type": "Social"
+				},
+				"Negotiation": {
+					"value": 0,
+					"type": "Social"
+				},
+				"Acrobatics": {
+					"value": 0,
+					"type": "Survival"
+				},
+				"Athletics": {
+					"value": 0,
+					"type": "Survival"
+				},
+				"Awareness": {
+					"value": 0,
+					"type": "Survival"
+				},
+				"Beasts": {
+					"value": 0,
+					"type": "Survival"
+				},
+				"Composure": {
+					"value": 0,
+					"type": "Survival"
+				},
+				"First Aid": {
+					"value": 0,
+					"type": "Survival"
+				},
+				"Making": {
+					"value": 0,
+					"type": "Survival"
+				},
+				"Resilience": {
+					"value": 0,
+					"type": "Survival"
+				},
+				"Scrounging": {
+					"value": 0,
+					"type": "Survival"
+				},
+				"Stealth": {
+					"value": 0,
+					"type": "Survival"
+				},
+				"Driving": {
+					"value": 0,
+					"type": "Technical"
+				},
+				"Explosives": {
+					"value": 0,
+					"type": "Technical"
+				},
+				"Flying": {
+					"value": 0,
+					"type": "Technical"
+				},
+				"Mechanics": {
+					"value": 0,
+					"type": "Technical"
+				},
+				"Skulduggery": {
+					"value": 0,
+					"type": "Technical"
+				},
+			}
+		}
+	}
+	"PC": {
+			"templates": ["background", "stats", "attributes", "skills"],
+		},
+	"Foe": {
+			"templates": ["stats", "skills"]
+		},
+	"Horde": {
+			"templates": ["stats", "skills"]
+		}
+},
+"Item": {
+	"Types": ["weapon", "armor", "gear", "resource"],
+	"templates": {
+		"encumbrance": {
+			"encumbrance": 1
+		}
+	},
+	"weapon": {
+		"templates": ["encumbrance"],
+		"damage": "1d6"
+	},
+	"armor": {
+		"templates": ["encumbrance"],
+		"soak": 1
+	},
+	"gear": {
+		"templates": ["encumbrance"],
+	},
+	"resource": {
+		"templates": ["encumbrance"],
+	},
+}		

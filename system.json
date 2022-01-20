@@ -1,0 +1,49 @@
+{
+"name": "rving",
+"title": "RVing",
+"description": "A game about surviving a zombie apocalypse.",
+"version": "0.0.1",
+"templateVersion": 2,
+"author": "Paul - Cries While He Makes This - Norris",
+"scripts": [
+	"scripts/X",
+	"scripts/X2",
+	],
+"esmodules": [
+	"scripts/X"
+	],
+"styles": [
+	"styles/X",
+	"styles/X2"
+	],
+"packs": [
+	{
+		"name": "adversaries",
+		"label": "Adversaries",
+		"path": "packs/adversaries.db",
+		"entity": "Actor"
+	},
+	{
+		"name": "items"
+		"label": "Items"
+		"path": "packs/items.db",
+		"entity": "Item"
+	}
+],
+"languages": [
+	{
+		"lang": "en"
+		"name": "English"
+		"path": "lang/en.json"
+	}
+],
+"socket": false,
+"initiative": "???",
+"gridDistance": "10"
+"gridUnits": "m",
+"primaryTokenAttribute": "resources.stamina",
+"secondaryTokenAttribute": "none",
+"url": "none",
+"manifest": "none",
+"download": "none"
+}
