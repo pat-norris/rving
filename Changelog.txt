@@ -1,0 +1,4 @@
+27/01/2022
+-Added Perk as an item class.
+-Altered definitions of some other item classes.
+-Added a few folders and empty dbs.
