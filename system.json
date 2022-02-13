@@ -7,7 +7,7 @@
 "author": "Paul - Cries While He Makes This - Norris",
 "scripts": [
 	"scripts/X",
-	"scripts/X2",
+	"scripts/X2"
 	],
 "esmodules": [
 	"scripts/X"
@@ -24,26 +24,26 @@
 		"entity": "Actor"
 	},
 	{
-		"name": "items"
-		"label": "Items"
+		"name": "items",
+		"label": "Items",
 		"path": "packs/items.db",
 		"entity": "Item"
 	}
 ],
 "languages": [
 	{
-		"lang": "en"
-		"name": "English"
+		"lang": "en",
+		"name": "English",
 		"path": "lang/en.json"
 	}
 ],
 "socket": false,
 "initiative": "???",
-"gridDistance": "10"
+"gridDistance": "10",
 "gridUnits": "m",
 "primaryTokenAttribute": "resources.stamina",
 "secondaryTokenAttribute": "none",
-"url": "none",
-"manifest": "none",
-"download": "none"
+"url": "https://https//github.com/pat-norris/rving",
+"manifest": "https://github.com/pat-norris/rving/blob/main/system.json",
+"download": "https://github.com/pat-norris/rving/archive/refs/heads/main.zip" 
 }
