@@ -6,11 +6,11 @@
 "templateVersion": 2,
 "author": "Paul - Cries While He Makes This - Norris",
 "scripts": [
-	"scripts/module/main.js",
+	"module/main.js",
 	"scripts/X2"
 	],
 "esmodules": [
-	"scripts/X"
+	"module/main.js"
 	],
 "styles": [
 	"styles/X",
