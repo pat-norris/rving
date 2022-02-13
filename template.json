@@ -197,24 +197,73 @@
 		}
 },
 "Item": {
-	"Types": ["weapon", "armor", "gear", "resource"],
+	"Types": ["weapon", "armor", "gear", "resource", "perk"],
 	"templates": {
-		"encumbrance": {
-			"encumbrance": 1
+		"core": {
+			"description": "",
+			"attributes": {}
+		},
+		"basic": {
+			"quantity": {
+				"value": 1,
+				"type": "Number",
+				"label": "Quantity"
+			}
+			"encumbrance": {
+				"value": 0,
+				"type": "Number",
+				"label": "Encumbrance"
+			}
+		}
+		"equippable": {
+			"value": true,
+			"type": "Boolean",
+			"equipped": false
 		}
 	},
 	"weapon": {
-		"templates": ["encumbrance"],
-		"damage": "1d6"
+		"templates": ["core", "basic", "equippable"],
+		"skill": {
+			"value": "Big Guns",
+			"type": "String",
+			"label": "Skill"
+		},
+		"damage": {
+			"value": "1d4+0",
+			"type": "",
+			"label": "Damage"
+		},
+		"range": {
+			"value": "Short",
+			"type": "String",
+			"label": "Range"
+		},
+		"critical multiplier": {
+			"value": 2,
+			"type": "Number",
+			"label": "Critical Multiplier"
+		}
 	},
 	"armor": {
-		"templates": ["encumbrance"],
-		"soak": 1
+		"templates": ["core", "basic", "equippable"],
+		"defense": {
+			"value": 0,
+			"type": "Number",
+			"label": "Defense"
+		},
+		"soak": {
+			"value": 0,
+			"type": "Number",
+			"label": "Soak"
+		}
 	},
 	"gear": {
-		"templates": ["encumbrance"],
+		"templates": ["core", "basic"],
 	},
 	"resource": {
-		"templates": ["encumbrance"],
+		"templates": ["core" "basic"],
 	},
-}		
+	"perk": {
+		"templates": ["core"]
+	}
+}
