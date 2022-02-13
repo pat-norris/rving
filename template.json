@@ -58,9 +58,9 @@
 					"value": 0,
 					"label": "Luck",
 					"abrev": "LU"
-				},
+				}
 			}
-		}
+		},
 		"skills": {
 			"skills": {
 				"Big Guns": {
@@ -182,12 +182,12 @@
 				"Skulduggery": {
 					"value": 0,
 					"type": "Technical"
-				},
+				}
 			}
 		}
-	}
+	},
 	"PC": {
-			"templates": ["background", "stats", "attributes", "skills"],
+			"templates": ["background", "stats", "attributes", "skills"]
 		},
 	"Foe": {
 			"templates": ["stats", "skills"]
@@ -208,13 +208,13 @@
 				"value": 1,
 				"type": "Number",
 				"label": "Quantity"
-			}
+			},
 			"encumbrance": {
 				"value": 0,
 				"type": "Number",
 				"label": "Encumbrance"
 			}
-		}
+		},
 		"equippable": {
 			"value": true,
 			"type": "Boolean",
@@ -258,12 +258,13 @@
 		}
 	},
 	"gear": {
-		"templates": ["core", "basic"],
+		"templates": ["core", "basic"]
 	},
 	"resource": {
-		"templates": ["core" "basic"],
+		"templates": ["core", "basic"]
 	},
 	"perk": {
 		"templates": ["core"]
 	}
+}
 }
