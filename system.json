@@ -44,6 +44,6 @@
 "primaryTokenAttribute": "resources.stamina",
 "secondaryTokenAttribute": "none",
 "url": "https://https//github.com/pat-norris/rving",
-"manifest": "https://github.com/pat-norris/rving/blob/main/system.json",
+"manifest": "https://github.com/pat-norris/rving/master/system.json",
 "download": "https://github.com/pat-norris/rving/archive/refs/heads/main.zip" 
 }
