@@ -19,7 +19,8 @@ export class BoilerplateActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    return `systems/rving/templates/actors/rving-${this.actor.data.type}-sheet.html`;
+    // usually dynamically named
+    return `systems/rving/templates/actors/rving-character-sheet.html`;
   }
 
   /* -------------------------------------------- */
