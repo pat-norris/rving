@@ -1,9 +1,9 @@
 // Import document classes.
-import { BoilerplateActor } from "./documents/actor.mjs";
-import { BoilerplateItem } from "./documents/item.mjs";
+import { BoilerplateActor } from "./documents/actor.js";
+import { BoilerplateItem } from "./documents/item.js";
 // Import sheet classes.
-import { BoilerplateActorSheet } from "./sheets/actor-sheet.mjs";
-import { BoilerplateItemSheet } from "./sheets/item-sheet.mjs";
+import { BoilerplateActorSheet } from "./sheets/actor-sheet.js";
+import { BoilerplateItemSheet } from "./sheets/item-sheet.js";
 // Import helper/utility classes and constants.
 //import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 //import { BOILERPLATE } from "./helpers/config.mjs";
