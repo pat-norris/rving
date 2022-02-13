@@ -6,7 +6,7 @@
 "templateVersion": 2,
 "author": "Paul - Cries While He Makes This - Norris",
 "scripts": [
-	"scripts/X",
+	"scripts/module/main.js",
 	"scripts/X2"
 	],
 "esmodules": [
