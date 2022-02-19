@@ -2,7 +2,7 @@
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
  */
- export class BoilerplateActor extends Actor {
+ export class RVingActor extends Actor {
 
     /** @override */
     prepareData() {
@@ -43,15 +43,108 @@
      * Prepare Character type specific data
      */
     _prepareCharacterData(actorData) {
-      if (actorData.type !== 'character') return;
+      if (actorData.type !== 'pc') return;
   
       // Make modifications to data here. For example:
       const data = actorData.data;
-  
+      
       // Loop through ability scores, and add their modifiers to our sheet output.
-      for (let [key, ability] of Object.entries(data.abilities)) {
-        // Calculate the modifier using d20 rules.
-        ability.mod = Math.floor((ability.value - 10) / 2);
+      for (let [key, skill] of Object.entries(data.skills.skills)) {
+        switch(skill) {
+          case 'Big Guns':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Bows':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Melee':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Small Guns':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Throwing':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Unarmed':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Computers':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Engineering':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Rocket Science':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Substances':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Surgery':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Charm':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Coercion':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Deception':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Negotiation':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Acrobatics':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Athletics':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Awareness':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Beasts':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Composure':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'First Aid':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Making':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Resilience':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Scrounging':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Stealth':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Driving':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Explosives':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Flying':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Mechanics':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          case 'Skullduggery':
+            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            break;
+          default:
+            // Nothing
+        }  
+        skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
       }
     }
   

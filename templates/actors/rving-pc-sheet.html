@@ -21,11 +21,23 @@
 					</div>
 				</div>
 			</div>
+			<h2>Attributes</h2>
 			<div class="attribute grid grid-3col">
-				{{#each data.attribute as |attribute key|}}
+				{{#each data.attributes.attributes as |attribute key|}}
 				<div class="attribute flexrow flew-group-center">
-					<label for="data.attribute.{{key}}.value" class="resource-label">{{key}}</label>
-					<input type="text" name="data.attribute.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
+					<label for="data.attributes.attributes.{{key}}.value" class="resource-label">{{key}}</label>
+					<input type="text" id="data.attributes.attributes.{{key}}.value" name="data.attributes.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
+				</div>
+				{{/each}}
+			</div>
+			<h2>Skills</h2>
+			<div class="skill grid grid-3col">
+				{{#each data.skills.skills as |skill key|}}
+				<div class="skills flexrow flew-group-center">
+					<label for="data.skills.skills.{{key}}.value" class="resource-label">{{key}}</label>
+					<!--<input type="text" id="name="data.skills.skills.{{key}}.value" name="data.skills.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>-->
+					<span id="name="data.skills.skills.{{key}}.value" name="data.skills.skills.{{key}}.value">{{skill.value}}</span>
+					<input type="text" id="data.skills.skills.{{key}}.increases" name="data.skills.skills.{{key}}.increases" value="data.skills.skills.{{key}}.increases" data-dtype="Number"/>
 				</div>
 				{{/each}}
 			</div>

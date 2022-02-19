@@ -65,123 +65,153 @@
 			"skills": {
 				"Big Guns": {
 					"value": 0,
-					"type": "Combat"
+					"type": "Combat",
+					"increases": 0
 				},
 				"Bows": {
 					"value": 0,
-					"type": "Combat"
+					"type": "Combat",
+					"increases": 0
 				},
 				"Melee": {
 					"value": 0,
-					"type": "Combat"
+					"type": "Combat",
+					"increases": 0
 				},
 				"Small Guns": {
 					"value": 0,
-					"type": "Combat"
+					"type": "Combat",
+					"increases": 0
 				},
 				"Throwing": {
 					"value": 0,
-					"type": "Combat"
+					"type": "Combat",
+					"increases": 0
 				},
 				"Unarmed": {
 					"value": 0,
-					"type": "Combat"
+					"type": "Combat",
+					"increases": 0
 				},
 				"Computers": {
 					"value": 0,
-					"type": "Education"
+					"type": "Education",
+					"increases": 0
 				},
 				"Engineering": {
 					"value": 0,
-					"type": "Education"
+					"type": "Education",
+					"increases": 0
 				},
 				"Rocket Science": {
 					"value": 0,
-					"type": "Education"
+					"type": "Education",
+					"increases": 0
 				},
 				"Substances": {
 					"value": 0,
-					"type": "Education"
+					"type": "Education",
+					"increases": 0
 				},
 				"Surgery": {
 					"value": 0,
-					"type": "Education"
+					"type": "Education",
+					"increases": 0
 				},
 				"Charm": {
 					"value": 0,
-					"type": "Social"
+					"type": "Social",
+					"increases": 0
 				},
 				"Coercion": {
 					"value": 0,
-					"type": "Social"
+					"type": "Social",
+					"increases": 0
 				},
 				"Deception": {
 					"value": 0,
-					"type": "Social"
+					"type": "Social",
+					"increases": 0
 				},
 				"Negotiation": {
 					"value": 0,
-					"type": "Social"
+					"type": "Social",
+					"increases": 0
 				},
 				"Acrobatics": {
 					"value": 0,
-					"type": "Survival"
+					"type": "Survival",
+					"increases": 0
 				},
 				"Athletics": {
 					"value": 0,
-					"type": "Survival"
+					"type": "Survival",
+					"increases": 0
 				},
 				"Awareness": {
 					"value": 0,
-					"type": "Survival"
+					"type": "Survival",
+					"increases": 0
 				},
 				"Beasts": {
 					"value": 0,
-					"type": "Survival"
+					"type": "Survival",
+					"increases": 0
 				},
 				"Composure": {
 					"value": 0,
-					"type": "Survival"
+					"type": "Survival",
+					"increases": 0
 				},
 				"First Aid": {
 					"value": 0,
-					"type": "Survival"
+					"type": "Survival",
+					"increases": 0
 				},
 				"Making": {
 					"value": 0,
-					"type": "Survival"
+					"type": "Survival",
+					"increases": 0
 				},
 				"Resilience": {
 					"value": 0,
-					"type": "Survival"
+					"type": "Survival",
+					"increases": 0
 				},
 				"Scrounging": {
 					"value": 0,
-					"type": "Survival"
+					"type": "Survival",
+					"increases": 0
 				},
 				"Stealth": {
 					"value": 0,
-					"type": "Survival"
+					"type": "Survival",
+					"increases": 0
 				},
 				"Driving": {
 					"value": 0,
-					"type": "Technical"
+					"type": "Technical",
+					"increases": 0
 				},
 				"Explosives": {
 					"value": 0,
-					"type": "Technical"
+					"type": "Technical",
+					"increases": 0
 				},
 				"Flying": {
 					"value": 0,
-					"type": "Technical"
+					"type": "Technical",
+					"increases": 0
 				},
 				"Mechanics": {
 					"value": 0,
-					"type": "Technical"
+					"type": "Technical",
+					"increases": 0
 				},
 				"Skulduggery": {
 					"value": 0,
-					"type": "Technical"
+					"type": "Technical",
+					"increases": 0
 				}
 			}
 		}

@@ -4,13 +4,13 @@ import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/ef
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class BoilerplateActorSheet extends ActorSheet {
+export class RVingActorSheet extends ActorSheet {
 
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["boilerplate", "sheet", "actor"],
-      template: "systems/rving/templates/actors/rving-character-sheet.html",
+      template: "systems/rving/templates/actors/rving-pc-sheet.html",
       width: 600,
       height: 600,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
@@ -20,7 +20,11 @@ export class BoilerplateActorSheet extends ActorSheet {
   /** @override */
   get template() {
     // usually dynamically named
-    return `systems/rving/templates/actors/rving-character-sheet.html`;
+    // TODO: rever back to code from the gitlab (with minor alterations)
+    // TODO: rename character sheets to use PC/Foe/Horde
+    // Change on line 13 as well (will need to do in all other sheet files too)
+    //return `systems/rving/templates/actors/rving-pc-sheet.html`;
+    return `systems/rving/templates/actors/rving-${this.actor.data.type}-sheet.html`;
   }
 
   /* -------------------------------------------- */
