@@ -1,0 +1,40 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+	<header class="sheet-header">
+		<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+		<div class="header-fields">
+			<h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+			<div class="resources grid grid-2col">
+				<div class="resource flex-group-center">
+					<label for="data.stamina.value" class="resourse-label">Quantity</label>
+					<div class="resource-content flexrow flex-center flex-between">
+						<input type="text" name="data.quantity.value" value="{{data.quantity.value}}" data-dtype="Number"/>
+					</div>
+				</div>
+				<div class="resource flex-group-center">
+					<label for="data.encumbrance.value" class="resourse-label">Encumbrance</label>
+					<div class="resource-content flexrow flex-center flex-between">
+						<span type="text" name="data.encumbrance.value">{{data.encumbrance.value}}</span>
+					</div>
+				</div>
+                <div class="resource flex-group-center">
+					<label for="data.encumbrance.value" class="resourse-label">Equippable</label>
+					<div class="resource-content flexrow flex-center flex-between">
+						<span type="text" name="data.equippable.value">{{data.equippable.value}}</span>
+					</div>
+				</div>
+			</div>
+			<h2>Description</h2>
+			<div class="attribute grid grid-3col">
+				{{#each data.attributes as |attribute key|}}
+				<div class="attribute flexrow flew-group-center">
+					<label for="data.attributes.{{key}}.value" class="resource-label">{{key}}</label>
+					<input type="text" id="data.attributes.{{key}}.value" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+	</header>
+	
+	<section class="sheet-body">
+	</section>
+</form>

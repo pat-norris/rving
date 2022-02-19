@@ -1,0 +1,20 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+	<header class="sheet-header">
+		<img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="100" width="100"/>
+		<div class="header-fields">
+			<h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+			<h2>Description</h2>
+			<div class="attribute grid grid-3col">
+				{{#each data.attributes as |attribute key|}}
+				<div class="attribute flexrow flew-group-center">
+					<label for="data.attributes.{{key}}.value" class="resource-label">{{key}}</label>
+					<input type="text" id="data.attributes.{{key}}.value" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+	</header>
+	
+	<section class="sheet-body">
+	</section>
+</form>

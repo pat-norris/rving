@@ -1,300 +1,301 @@
 {
-"Actor": {
-	"types": ["PC", "Foe", "Horde"],
-	"templates": {
-		"background": {
-			"biography": "",
-			"hairColor": ""
-		},
-		"stats": {
-			"stamina": {
-				"value": 0,
-				"min": 0,
-				"max": 0
+	"Actor": {
+		"types": ["PC", "Foe", "Horde"],
+		"templates": {
+			"background": {
+				"biography": "",
+				"hairColor": ""
 			},
+			"stats": {
+				"stamina": {
+					"value": 0,
+					"min": 0,
+					"max": 0
+				},
+				"defense": {
+					"value": 0
+				},
+				"soak": {
+					"value": 0
+				},
+				"encumbrance": {
+					"value": 0,
+					"max": 0
+				}
+			},
+			"attributes": {
+				"attributes": {
+					"Strength": {
+						"value": 0,
+						"label": "Strength",
+						"abrev": "S"
+					},
+					"Perception": {
+						"value": 0,
+						"label": "Perception",
+						"abrev": "P"
+					},
+					"Endurance": {
+						"value": 0,
+						"label": "Endurance",
+						"abrev": "E"
+					},
+					"Charisma": {
+						"value": 0,
+						"label": "Charisma",
+						"abrev": "C"
+					},
+					"Intelligence": {
+						"value": 0,
+						"label": "Intelligence",
+						"abrev": "I"
+					},
+					"Agility": {
+						"value": 0,
+						"label": "Agility",
+						"abrev": "A"
+					},
+					"Luck": {
+						"value": 0,
+						"label": "Luck",
+						"abrev": "L"
+					}
+				}
+			},
+			"skills": {
+				"skills": {
+					"Big Guns": {
+						"value": 0,
+						"type": "Combat",
+						"increases": 0
+					},
+					"Bows": {
+						"value": 0,
+						"type": "Combat",
+						"increases": 0
+					},
+					"Melee": {
+						"value": 0,
+						"type": "Combat",
+						"increases": 0
+					},
+					"Small Guns": {
+						"value": 0,
+						"type": "Combat",
+						"increases": 0
+					},
+					"Throwing": {
+						"value": 0,
+						"type": "Combat",
+						"increases": 0
+					},
+					"Unarmed": {
+						"value": 0,
+						"type": "Combat",
+						"increases": 0
+					},
+					"Computers": {
+						"value": 0,
+						"type": "Education",
+						"increases": 0
+					},
+					"Engineering": {
+						"value": 0,
+						"type": "Education",
+						"increases": 0
+					},
+					"Rocket Science": {
+						"value": 0,
+						"type": "Education",
+						"increases": 0
+					},
+					"Substances": {
+						"value": 0,
+						"type": "Education",
+						"increases": 0
+					},
+					"Surgery": {
+						"value": 0,
+						"type": "Education",
+						"increases": 0
+					},
+					"Charm": {
+						"value": 0,
+						"type": "Social",
+						"increases": 0
+					},
+					"Coercion": {
+						"value": 0,
+						"type": "Social",
+						"increases": 0
+					},
+					"Deception": {
+						"value": 0,
+						"type": "Social",
+						"increases": 0
+					},
+					"Negotiation": {
+						"value": 0,
+						"type": "Social",
+						"increases": 0
+					},
+					"Acrobatics": {
+						"value": 0,
+						"type": "Survival",
+						"increases": 0
+					},
+					"Athletics": {
+						"value": 0,
+						"type": "Survival",
+						"increases": 0
+					},
+					"Awareness": {
+						"value": 0,
+						"type": "Survival",
+						"increases": 0
+					},
+					"Beasts": {
+						"value": 0,
+						"type": "Survival",
+						"increases": 0
+					},
+					"Composure": {
+						"value": 0,
+						"type": "Survival",
+						"increases": 0
+					},
+					"First Aid": {
+						"value": 0,
+						"type": "Survival",
+						"increases": 0
+					},
+					"Making": {
+						"value": 0,
+						"type": "Survival",
+						"increases": 0
+					},
+					"Resilience": {
+						"value": 0,
+						"type": "Survival",
+						"increases": 0
+					},
+					"Scrounging": {
+						"value": 0,
+						"type": "Survival",
+						"increases": 0
+					},
+					"Stealth": {
+						"value": 0,
+						"type": "Survival",
+						"increases": 0
+					},
+					"Driving": {
+						"value": 0,
+						"type": "Technical",
+						"increases": 0
+					},
+					"Explosives": {
+						"value": 0,
+						"type": "Technical",
+						"increases": 0
+					},
+					"Flying": {
+						"value": 0,
+						"type": "Technical",
+						"increases": 0
+					},
+					"Mechanics": {
+						"value": 0,
+						"type": "Technical",
+						"increases": 0
+					},
+					"Skulduggery": {
+						"value": 0,
+						"type": "Technical",
+						"increases": 0
+					}
+				}
+			}
+		},
+		"PC": {
+				"templates": ["background", "stats", "attributes", "skills"]
+			},
+		"Foe": {
+				"templates": ["stats", "skills"]
+			},
+		"Horde": {
+				"templates": ["stats", "skills"]
+			}
+	},
+	"Item": {
+		"types": ["weapon", "armor", "gear", "resource", "perk"],
+		"templates": {
+			"core": {
+				"description": "",
+				"attributes": {}
+			},
+			"basic": {
+				"quantity": {
+					"value": 1,
+					"type": "Number",
+					"label": "Quantity"
+				},
+				"encumbrance": {
+					"value": 0,
+					"type": "Number",
+					"label": "Encumbrance"
+				}
+			},
+			"equippable": {
+				"value": true,
+				"type": "Boolean",
+				"equipped": false
+			}
+		},
+		"weapon": {
+			"templates": ["core", "basic", "equippable"],
+			"skill": {
+				"value": "Big Guns",
+				"type": "String",
+				"label": "Skill"
+			},
+			"damage": {
+				"value": "1d4+0",
+				"type": "",
+				"label": "Damage"
+			},
+			"range": {
+				"value": "Short",
+				"type": "String",
+				"label": "Range"
+			},
+			"critical multiplier": {
+				"value": 2,
+				"type": "Number",
+				"label": "Critical Multiplier"
+			}
+		},
+		"armor": {
+			"templates": ["core", "basic", "equippable"],
 			"defense": {
-				"value": 0
+				"value": 0,
+				"type": "Number",
+				"label": "Defense"
 			},
 			"soak": {
-				"value": 0
-			},
-			"encumbrance": {
-				"value": 0
-			}
-		},
-		"attributes": {
-			"attributes": {
-				"Strength": {
-					"value": 0,
-					"label": "Strength",
-					"abrev": "S"
-				},
-				"Perception": {
-					"value": 0,
-					"label": "Perception",
-					"abrev": "P"
-				},
-				"Endurance": {
-					"value": 0,
-					"label": "Endurance",
-					"abrev": "E"
-				},
-				"Charisma": {
-					"value": 0,
-					"label": "Charisma",
-					"abrev": "C"
-				},
-				"Intelligence": {
-					"value": 0,
-					"label": "Intelligence",
-					"abrev": "I"
-				},
-				"Agility": {
-					"value": 0,
-					"label": "Agility",
-					"abrev": "A"
-				},
-				"Luck": {
-					"value": 0,
-					"label": "Luck",
-					"abrev": "L"
-				}
-			}
-		},
-		"skills": {
-			"skills": {
-				"Big Guns": {
-					"value": 0,
-					"type": "Combat",
-					"increases": 0
-				},
-				"Bows": {
-					"value": 40,
-					"type": "Combat",
-					"increases": 0
-				},
-				"Melee": {
-					"value": 0,
-					"type": "Combat",
-					"increases": 0
-				},
-				"Small Guns": {
-					"value": 0,
-					"type": "Combat",
-					"increases": 0
-				},
-				"Throwing": {
-					"value": 0,
-					"type": "Combat",
-					"increases": 0
-				},
-				"Unarmed": {
-					"value": 0,
-					"type": "Combat",
-					"increases": 0
-				},
-				"Computers": {
-					"value": 0,
-					"type": "Education",
-					"increases": 0
-				},
-				"Engineering": {
-					"value": 0,
-					"type": "Education",
-					"increases": 0
-				},
-				"Rocket Science": {
-					"value": 0,
-					"type": "Education",
-					"increases": 0
-				},
-				"Substances": {
-					"value": 0,
-					"type": "Education",
-					"increases": 0
-				},
-				"Surgery": {
-					"value": 0,
-					"type": "Education",
-					"increases": 0
-				},
-				"Charm": {
-					"value": 0,
-					"type": "Social",
-					"increases": 0
-				},
-				"Coercion": {
-					"value": 0,
-					"type": "Social",
-					"increases": 0
-				},
-				"Deception": {
-					"value": 0,
-					"type": "Social",
-					"increases": 0
-				},
-				"Negotiation": {
-					"value": 0,
-					"type": "Social",
-					"increases": 0
-				},
-				"Acrobatics": {
-					"value": 0,
-					"type": "Survival",
-					"increases": 0
-				},
-				"Athletics": {
-					"value": 0,
-					"type": "Survival",
-					"increases": 0
-				},
-				"Awareness": {
-					"value": 0,
-					"type": "Survival",
-					"increases": 0
-				},
-				"Beasts": {
-					"value": 0,
-					"type": "Survival",
-					"increases": 0
-				},
-				"Composure": {
-					"value": 0,
-					"type": "Survival",
-					"increases": 0
-				},
-				"First Aid": {
-					"value": 0,
-					"type": "Survival",
-					"increases": 0
-				},
-				"Making": {
-					"value": 0,
-					"type": "Survival",
-					"increases": 0
-				},
-				"Resilience": {
-					"value": 0,
-					"type": "Survival",
-					"increases": 0
-				},
-				"Scrounging": {
-					"value": 0,
-					"type": "Survival",
-					"increases": 0
-				},
-				"Stealth": {
-					"value": 0,
-					"type": "Survival",
-					"increases": 0
-				},
-				"Driving": {
-					"value": 0,
-					"type": "Technical",
-					"increases": 0
-				},
-				"Explosives": {
-					"value": 0,
-					"type": "Technical",
-					"increases": 0
-				},
-				"Flying": {
-					"value": 0,
-					"type": "Technical",
-					"increases": 0
-				},
-				"Mechanics": {
-					"value": 0,
-					"type": "Technical",
-					"increases": 0
-				},
-				"Skulduggery": {
-					"value": 0,
-					"type": "Technical",
-					"increases": 0
-				}
-			}
-		}
-	},
-	"PC": {
-			"templates": ["background", "stats", "attributes", "skills"]
-		},
-	"Foe": {
-			"templates": ["stats", "skills"]
-		},
-	"Horde": {
-			"templates": ["stats", "skills"]
-		}
-},
-"Item": {
-	"Types": ["weapon", "armor", "gear", "resource", "perk"],
-	"templates": {
-		"core": {
-			"description": "",
-			"attributes": {}
-		},
-		"basic": {
-			"quantity": {
-				"value": 1,
-				"type": "Number",
-				"label": "Quantity"
-			},
-			"encumbrance": {
 				"value": 0,
 				"type": "Number",
-				"label": "Encumbrance"
+				"label": "Soak"
 			}
 		},
-		"equippable": {
-			"value": true,
-			"type": "Boolean",
-			"equipped": false
+		"gear": {
+			"templates": ["core", "basic"]
+		},
+		"resource": {
+			"templates": ["core", "basic"]
+		},
+		"perk": {
+			"templates": ["core"]
 		}
-	},
-	"weapon": {
-		"templates": ["core", "basic", "equippable"],
-		"skill": {
-			"value": "Big Guns",
-			"type": "String",
-			"label": "Skill"
-		},
-		"damage": {
-			"value": "1d4+0",
-			"type": "",
-			"label": "Damage"
-		},
-		"range": {
-			"value": "Short",
-			"type": "String",
-			"label": "Range"
-		},
-		"critical multiplier": {
-			"value": 2,
-			"type": "Number",
-			"label": "Critical Multiplier"
-		}
-	},
-	"armor": {
-		"templates": ["core", "basic", "equippable"],
-		"defense": {
-			"value": 0,
-			"type": "Number",
-			"label": "Defense"
-		},
-		"soak": {
-			"value": 0,
-			"type": "Number",
-			"label": "Soak"
-		}
-	},
-	"gear": {
-		"templates": ["core", "basic"]
-	},
-	"resource": {
-		"templates": ["core", "basic"]
-	},
-	"perk": {
-		"templates": ["core"]
 	}
-}
-}
+	}

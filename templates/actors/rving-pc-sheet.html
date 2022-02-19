@@ -32,10 +32,14 @@
 			</div>
 			<h2>Skills</h2>
 			<div class="skill grid grid-3col">
+				<div class="skills flexrow flew-group-center">
+					<label class="resource-label" style="font-size:18px;font-weight:bold;">Name</label>
+					<label class="resource-label" style="font-size:18px;font-weight:bold;">Value</label>
+					<label class="resource-label" style="font-size:18px;font-weight:bold;">Increases</label>
+				</div>
 				{{#each data.skills as |skill key|}}
 				<div class="skills flexrow flew-group-center">
 					<label for="data.skills.{{key}}.value" class="resource-label">{{key}}</label>
-					<!--<input type="text" id="name="data.skills.{{key}}.value" name="data.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>-->
 					<span id="name="data.skills.{{key}}.value" name="data.skills.{{key}}.value">{{skill.value}}</span>
 					<input type="text" id="data.skills.{{key}}.increases" name="data.skills.{{key}}.increases" value="{{skill.increases}}" data-dtype="Number"/>
 				</div>
