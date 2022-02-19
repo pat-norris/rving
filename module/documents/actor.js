@@ -52,7 +52,7 @@
       for (let [key, skill] of Object.entries(data.skills.skills)) {
         switch(skill) {
           case 'Big Guns':
-            skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;
+            skill.value = actorData.attributes.Strength.value * 5 + actorData.attributes.Luck.value;
             break;
           case 'Bows':
             skill.value = actorData.attributes.attributes.Strength.value * 5 + actorData.attributes.attributes.Luck.value;

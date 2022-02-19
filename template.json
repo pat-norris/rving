@@ -27,37 +27,37 @@
 				"Strength": {
 					"value": 0,
 					"label": "Strength",
-					"abrev": "ST"
+					"abrev": "S"
 				},
 				"Perception": {
 					"value": 0,
 					"label": "Perception",
-					"abrev": "PE"
+					"abrev": "P"
 				},
 				"Endurance": {
 					"value": 0,
 					"label": "Endurance",
-					"abrev": "EN"
+					"abrev": "E"
 				},
 				"Charisma": {
 					"value": 0,
 					"label": "Charisma",
-					"abrev": "CH"
+					"abrev": "C"
 				},
 				"Intelligence": {
 					"value": 0,
 					"label": "Intelligence",
-					"abrev": "IN"
+					"abrev": "I"
 				},
 				"Agility": {
 					"value": 0,
 					"label": "Agility",
-					"abrev": "AG"
+					"abrev": "A"
 				},
 				"Luck": {
 					"value": 0,
 					"label": "Luck",
-					"abrev": "LU"
+					"abrev": "L"
 				}
 			}
 		},
@@ -69,7 +69,7 @@
 					"increases": 0
 				},
 				"Bows": {
-					"value": 0,
+					"value": 40,
 					"type": "Combat",
 					"increases": 0
 				},
