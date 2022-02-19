@@ -1,9 +1,9 @@
 // Import document classes.
-import { RvingActor } from "./documents/actor.js";
-import { RvingItem } from "./documents/item.js";
+import { RVingActor } from "./documents/actor.js";
+import { RVingItem } from "./documents/item.js";
 // Import sheet classes.
-import { RvingActorSheet } from "./sheets/actor-sheet.js";
-import { RvingItemSheet } from "./sheets/item-sheet.js";
+import { RVingActorSheet } from "./sheets/actor-sheet.js";
+import { RVingItemSheet } from "./sheets/item-sheet.js";
 // Import helper/utility classes and constants.
 //import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 //import { BOILERPLATE } from "./helpers/config.mjs";
@@ -17,7 +17,7 @@ Hooks.once('init', async function() {
   // Add utility classes to the global game object so that they're more easily
   // accessible in global contexts.
   game.boilerplate = {
-    RvingActor,
+    RVingActor,
     //RvingItem,
     //rollItemMacro
   };
@@ -35,14 +35,14 @@ Hooks.once('init', async function() {
   };
 
   // Define custom Document classes
-  CONFIG.Actor.documentClass = RvingActor;
-  CONFIG.Item.documentClass = RvingItem;
+  CONFIG.Actor.documentClass = RVingActor;
+  CONFIG.Item.documentClass = RVingItem;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("boilerplate", RvingActorSheet, { makeDefault: true });
+  Actors.registerSheet("boilerplate", RVingActorSheet, { makeDefault: true });
   //Items.unregisterSheet("core", ItemSheet);
-  //Items.registerSheet("boilerplate", RvingItemSheet, { makeDefault: true });
+  //Items.registerSheet("boilerplate", RVingItemSheet, { makeDefault: true });
 
   // Preload Handlebars templates.
   //return preloadHandlebarsTemplates();
