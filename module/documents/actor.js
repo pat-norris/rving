@@ -53,95 +53,104 @@
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, skill] of Object.entries(data.skills)) {
       switch(skill) {
+        // Combat Skills
         case 'Big Guns':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 + 10 * data.attributes.Agility.value + 10 * data.attributes.Perception.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Bows':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 * data.attributes.Strength.value + 10 * data.attributes.Agility.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Melee':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 20 + 10 * data.attributes.Strength.value + 10 * data.attributes.Agility.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Small Guns':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 20 + 10 * data.attributes.Agility.value + 10 * data.attributes.Perception.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Throwing':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 * data.attributes.Strength.value + 10 * data.attributes.Agility.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Unarmed':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 * data.attributes.Strength.value + 10 * data.attributes.Agility.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
+
+        // Education Skills
         case 'Computers':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 15 * data.attributes.Intelligence.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Engineering':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 * data.attributes.Intelligence.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Rocket Science':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 * data.attributes.Intelligence.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Substances':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 * data.attributes.Intelligence.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Surgery':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 * data.attributes.Intelligence.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
+
+        // Social Skills
         case 'Charm':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 15 * data.attributes.Charisma.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Coercion':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 5 * data.attributes.Strength.value + 10 * data.attributes.Charisma.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Deception':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 5 * data.attributes.Perception.value + 10 * data.attributes.Charisma.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Negotiation':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 * data.attributes.Perception.value + 5 * data.attributes.Charisma.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
+
+        // Survival Skills
         case 'Acrobatics':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 + 5 * data.attributes.Strength.value + 5 * data.attributes.Endurance.value + 10 * data.attributes.Agility.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Athletics':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 30 + 10 * data.attributes.Strength.value + 5 * data.attributes.Endurance.value + 5 * data.attributes.Agility.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Awareness':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 20 + 10 * data.attributes.Perception.value + 10 * data.attributes.Intelligence.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Beasts':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 + 10 * data.attributes.Charisma.value + 10 * data.attributes.Intelligence.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Composure':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 * data.attributes.Charisma.value + 5 * data.attributes.Intelligence.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'First Aid':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 5 * data.attributes.Perception.value + 10 * data.attributes.Intelligence.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Making':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 5 * data.attributes.Strength.value + 10 * data.attributes.Intelligence.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Resilience':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 15 * data.attributes.Endurance.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Scrounging':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 + 15 * data.attributes.Perception.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Stealth':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 5 * data.attributes.Perception.value + 10 * data.attributes.Agility.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
+
+        // Technical Skills
         case 'Driving':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 + 10 * data.attributes.Perception.value + 10 * data.attributes.Agility.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Explosives':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 * data.attributes.Perception.value + 10 * data.attributes.Intelligence.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Flying':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 * data.attributes.Perception.value + 5 * data.attributes.Agility.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Mechanics':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 10 * data.attributes.Intelligence.value + 5 * data.attributes.Agility.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         case 'Skullduggery':
-          skill.value = data.attributes.Strength.value * 5 + data.attributes.Luck.value;
+          skill.value = 5 * data.attributes.Perception.value + 10 * data.attributes.Agility.value + data.attributes.Luck.value + 0 * skill.increases;
           break;
         default:
           // Nothing

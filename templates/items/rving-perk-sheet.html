@@ -4,6 +4,10 @@
 		<div class="header-fields">
 			<h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
 			<h2>Description</h2>
+			<p>
+				<input type="text" id="data.description" name="data.description" value="{{data.description}}}" data-dtype="text"/>
+			</p>
+			<!--
 			<div class="attribute grid grid-3col">
 				{{#each data.attributes as |attribute key|}}
 				<div class="attribute flexrow flew-group-center">
@@ -12,6 +16,7 @@
 				</div>
 				{{/each}}
 			</div>
+			-->
 		</div>
 	</header>
 	
