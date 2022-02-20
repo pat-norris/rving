@@ -33,7 +33,7 @@
     const data = actorData.data;
     const flags = actorData.flags.boilerplate || {};
     const perks = [];
-    for (let [key, item] of actorData.items) {
+    for (let [key, item] of Object.entries(actorData.items)) {
       switch(item.type) {
         case 'perk':
           perks.push(item);
@@ -57,9 +57,10 @@
     
     // Make modifications to data here. For example:
     const data = actorData.data;
+    const items = actorData.items;
     
     data.encumbrance.max = data.attributes.Strength.value + data.attributes.Endurance.value;
-    for (let [key, item] of actorData.items) {
+    for (let [key, item] of Object.entries(items)) {
       if (isset(item.encumbrance)) {
         data.emcumberance.value += item.encumbrance;    
       }
