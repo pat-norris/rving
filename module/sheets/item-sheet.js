@@ -8,6 +8,7 @@
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["boilerplate", "sheet", "item"],
+      template: "systems/rving/templates/items/rving-perk-sheet.html",
       width: 520,
       height: 480,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
