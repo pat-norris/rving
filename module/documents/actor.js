@@ -32,6 +32,16 @@
     const actorData = this.data;
     const data = actorData.data;
     const flags = actorData.flags.boilerplate || {};
+    const perks = [];
+    for (let [key, item] of actorData.items) {
+      switch(item.type) {
+        case 'perk':
+          perks.push(item);
+          break;
+        default:
+          // Nothing
+      }
+    }
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
@@ -49,7 +59,11 @@
     const data = actorData.data;
     
     data.encumbrance.max = data.attributes.Strength.value + data.attributes.Endurance.value;
-
+    for (let [key, item] of actorData.items) {
+      if (isset(item.encumbrance)) {
+        data.emcumberance.value += item.encumbrance;    
+      }
+    }
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, skill] of Object.entries(data.skills)) {
       switch(skill) {

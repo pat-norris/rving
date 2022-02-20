@@ -6,7 +6,6 @@
 
   /** @override */
   static get defaultOptions() {
-    console.log("got here");
     return mergeObject(super.defaultOptions, {
       classes: ["boilerplate", "sheet", "item"],
       template: "systems/rving/templates/items/rving-perk-sheet.html",
