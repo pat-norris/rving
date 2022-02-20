@@ -17,13 +17,10 @@
 
   /** @override */
   get template() {
-    const path = "systems/rving/templates/items";
-    // Return a single sheet for all item types.
-    // return `${path}/item-sheet.html`;
-
     // Alternatively, you could use the following return statement to do a
     // unique item sheet by type, like `weapon-sheet.html`.
-    return `${path}/rving-${this.item.data.type}-sheet.html`;
+    // return `systems/rving/templates/items/rving-${this.item.data.type}-sheet.html`;
+    return `systems/rving/templates/items/rving-perk-sheet.html`;
   }
 
   /* -------------------------------------------- */
