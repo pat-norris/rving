@@ -41,8 +41,8 @@ Hooks.once('init', async function() {
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("boilerplate", RVingActorSheet, { makeDefault: true });
-  //Items.unregisterSheet("core", ItemSheet);
-  //Items.registerSheet("boilerplate", RVingItemSheet, { makeDefault: true });
+  Items.unregisterSheet("core", ItemSheet);
+  Items.registerSheet("boilerplate", RVingItemSheet, { makeDefault: true });
 
   // Preload Handlebars templates.
   //return preloadHandlebarsTemplates();
