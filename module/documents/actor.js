@@ -32,15 +32,19 @@
     const actorData = this.data;
     const data = actorData.data;
     const flags = actorData.flags.boilerplate || {};
+    
+    const items = actorData.items.map((item) => item.data);
+
     const perks = [];
-    for (let [key, item] of Object.entries(actorData.items)) {
-      switch(item.type) {
-        case 'perk':
-          perks.push(item);
-          break;
-        default:
-          // Nothing
-      }
+    for (let i = 0; i < actorData.items._source.length; i++) {
+      console.log(actorData.items._source[i]);
+        switch(actorData.items._source[i].type) {
+          case 'perk':
+            perks.push(actorData.items._source[i]);
+            break;
+          default:
+            // Nothing
+        }
     }
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
@@ -60,14 +64,14 @@
     const items = actorData.items;
     
     data.encumbrance.max = data.attributes.Strength.value + data.attributes.Endurance.value;
-    for (let [key, item] of Object.entries(items)) {
-      if (isset(item.encumbrance)) {
-        data.emcumberance.value += item.encumbrance;    
+    for (let i = 0; i < actorData.items._source.length; i++) {
+      if (typeof actorData.items._source[i].encumbrance !== 'undefined') {
+        data.emcumberance.value += actorData.items._source[i].encumbrance;  
       }
     }
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, skill] of Object.entries(data.skills)) {
-      switch(skill) {
+      switch(key) {
         // Combat Skills
         case 'Big Guns':
           skill.value = 10 + 10 * data.attributes.Agility.value + 10 * data.attributes.Perception.value + data.attributes.Luck.value + 0 * skill.increases;

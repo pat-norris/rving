@@ -18,7 +18,7 @@ Hooks.once('init', async function() {
   // accessible in global contexts.
   game.boilerplate = {
     RVingActor,
-    //RVingItem,
+    RVingItem,
     //rollItemMacro
   };
 
@@ -30,8 +30,7 @@ Hooks.once('init', async function() {
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: "1d20 + @abilities.dex.mod",
-    decimals: 2
+    formula: "@attributes.Perception.value"
   };
 
   // Define custom Document classes

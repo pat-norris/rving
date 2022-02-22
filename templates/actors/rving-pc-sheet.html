@@ -1,9 +1,11 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
 	<header class="sheet-header">
+		<link rel="stylesheet" href="../rving.css">
 		<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
 		<div class="header-fields">
 			<h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
 			<div class="resources grid grid-2col">
+				<!--Stamina-->
 				<div class="resource flex-group-center">
 					<label for="data.stamina.value" class="resourse-label">Stamina</label>
 					<div class="resource-content flexrow flex-center flex-between">
@@ -12,6 +14,8 @@
 						<input type="text" name="data.stamina.max" value="{{data.stamina.max}}" data-dtype="Number"/>
 					</div>
 				</div>
+				
+				<!--Encumbrance-->
 				<div class="resource flex-group-center">
 					<label for="data.encumbrance.value" class="resourse-label">Encumbrance</label>
 					<div class="resource-content flexrow flex-center flex-between">
@@ -21,45 +25,54 @@
 					</div>
 				</div>
 			</div>
-			<h2>Attributes</h2>
-			<div class="attribute grid grid-3col">
-				{{#each data.attributes as |attribute key|}}
-				<div class="attribute flexrow flew-group-center">
-					<label for="data.attributes.{{key}}.value" class="resource-label">{{key}}</label>
-					<input type="text" id="data.attributes.{{key}}.value" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
-				</div>
-				{{/each}}
-			</div>
-			<h2>Skills</h2>
-			<div class="skill grid grid-3col">
-				<div class="skills flexrow flew-group-center">
-					<label class="resource-label" style="font-size:18px;font-weight:bold;">Name</label>
-					<label class="resource-label" style="font-size:18px;font-weight:bold;">Value</label>
-					<label class="resource-label" style="font-size:18px;font-weight:bold;">Increases</label>
-				</div>
-				{{#each data.skills as |skill key|}}
-				<div class="skills flexrow flew-group-center">
-					<label for="data.skills.{{key}}.value" class="resource-label">{{key}}</label>
-					<span id="data.skills.{{key}}.value" name="data.skills.{{key}}.value">{{skill.value}}</span>
-					<input type="text" id="data.skills.{{key}}.increases" name="data.skills.{{key}}.increases" value="{{skill.increases}}" data-dtype="Number"/>
-				</div>
-				{{/each}}
-			</div>
 		</div>
 	</header>
 	
-	<nav class="sheet-tabs tabs" data-group="primary">
-		<a class="item" data-tab="description">Inventory</a>
-		<a class="item" data-tab="description">Perks</a>
-	</nav>
-
-	{{#each perks as |perk key|}}
-	<div class="perks flexrow flew-group-center">
-		<button for="perks.{{key}}.description" data-toggle="collapse" data-target="perks.{{key}}.description">{{key}}</button>
-		<span id="perks.{{key}}.description" name="perks.{{key}}.description">{{perk.description}}</span>
-	</div>
-	{{/each}}
-	
 	<section class="sheet-body">
+		<nav class="sheet-tabs tabs" data-group="primary">
+			<a class="item" data-tab="attributes">Attributes</a>
+			<a class="item" data-tab="skills">Skills</a>
+			<a class="item" data-tab="perks">Perks</a>
+			<a class="item" data-tab="inventory">Inventory</a>
+		</nav>
+		<!--Attributes-->
+		<div class="tab grid grid-3col" data-tab="attributes">
+			<h2>Attributes</h2>
+			{{#each data.attributes as |attribute key|}}
+			<div class= flexrow flew-group-center">
+				<label for="data.attributes.{{key}}.value" class="resource-label">{{key}}</label>
+				<input type="text" id="data.attributes.{{key}}.value" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
+			</div>
+			{{/each}}
+		</div>
+		
+		<!--Skills-->
+		<div class="tab grid grid-3col" data-tab="skills">
+			<h2>Skills</h2>
+			<div class="flexrow flew-group-center">
+				<label class="resource-label" style="font-size:18px;font-weight:bold;">Name</label>
+				<label class="resource-label" style="font-size:18px;font-weight:bold;">Value</label>
+				<label class="resource-label" style="font-size:18px;font-weight:bold;">Increases</label>
+			</div>
+			{{#each data.skills as |skill key|}}
+			<div class="flexrow flew-group-center">
+				<label for="data.skills.{{key}}.value" class="resource-label">{{key}}</label>
+				<span id="data.skills.{{key}}.value" name="data.skills.{{key}}.value">{{skill.value}}</span>
+				<input type="text" id="data.skills.{{key}}.increases" name="data.skills.{{key}}.increases" value="{{skill.increases}}" data-dtype="Number"/>
+			</div>
+			{{/each}}
+		</div>
+	
+		<!--Perks-->
+		<div class="tab" data-tab="perks">
+			<h2>Perks</h2>
+			{{#each actor.items as |item key|}}
+			<div class="items-container" data-tab="perks">
+				<!--<button for="actors.items.{{key}}.description" data-toggle="collapse" data-target="actor.items.{{key}}.description">{{item.name}}</button>-->
+				<img class="perk-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="30" width="30"/>
+				<span id="actor.items.{{key}}.description" name="actor.items.{{key}}.description">{{item.name}}</span>
+			</div>
+			{{/each}}
+		</div>
 	</section>
 </form>
